@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotoERP | ERP para Autopeças, Oficinas e Operações de Alta Performance</title>
+    <meta
+      name="description"
+      content="MotoERP é um sistema ERP SaaS moderno para autopeças, oficinas e distribuidores com vendas, estoque, compras, financeiro e relatórios em uma operação integrada."
+    />
+    <meta
+      name="keywords"
+      content="ERP para autopeças, ERP para oficina, sistema ERP, controle de estoque, PDV, compras, financeiro empresarial, software para distribuidora"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="MotoERP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MotoERP | ERP para Autopeças, Oficinas e Operações de Alta Performance" />
+    <meta
+      property="og:description"
+      content="Vendas, estoque, compras, clientes e financeiro integrados em um ERP claro, rápido e profissional."
+    />
+    <meta property="og:image" content="./assets/logo-v3.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="MotoERP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MotoERP | ERP para Autopeças, Oficinas e Operações de Alta Performance" />
+    <meta
+      name="twitter:description"
+      content="ERP SaaS com PDV, estoque, compras, CRM e financeiro em um único fluxo."
+    />
+    <meta name="twitter:image" content="./assets/logo-v3.png" />
+    <link rel="icon" type="image/png" href="./assets/logo-v3.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            colors: {
+              carbon: "#101214",
+              ember: "#ff1d25",
+              emberDark: "#d90b14",
+              ash: "#5a6472",
+              fog: "#f5f7fa",
+              smoke: "#e9edf2",
+            },
+            boxShadow: {
+              soft: "0 24px 70px rgba(16, 18, 20, 0.12)",
+              red: "0 24px 60px rgba(255, 29, 37, 0.18)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(255, 29, 37, 0.12), transparent 22%),
+          radial-gradient(circle at 90% 12%, rgba(16, 18, 20, 0.08), transparent 22%),
+          linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+      }
+
+      .speed-lines {
+        background-image:
+          linear-gradient(120deg, rgba(255, 29, 37, 0.08) 0%, transparent 34%),
+          linear-gradient(160deg, rgba(16, 18, 20, 0.04) 0%, transparent 42%);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 0.08s;
+      }
+
+      .delay-2 {
+        transition-delay: 0.16s;
+      }
+
+      .delay-3 {
+        transition-delay: 0.24s;
+      }
+
+      .dash-float {
+        animation: dashFloat 8.5s ease-in-out infinite;
+      }
+
+      .dash-float-2 {
+        animation: dashFloat 10s ease-in-out infinite;
+        animation-delay: 0.7s;
+      }
+
+      .pulse-red {
+        animation: pulseRed 3.2s ease-in-out infinite;
+      }
+
+      @keyframes dashFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulseRed {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.08);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans text-carbon antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/88 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#inicio" class="flex items-center gap-4" aria-label="MotoERP">
+          <img src="./assets/logo-v3.png" alt="Logo MotoERP" class="h-12 w-auto" />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-semibold text-slate-600 lg:flex">
+          <a href="#modulos" class="transition hover:text-carbon">Módulos</a>
+          <a href="#vantagens" class="transition hover:text-carbon">Vantagens</a>
+          <a href="#metricas" class="transition hover:text-carbon">Resultados</a>
+          <a href="#faq" class="transition hover:text-carbon">FAQ</a>
+        </nav>
+
+        <a
+          href="#cta"
+          class="inline-flex items-center rounded-full bg-ember px-5 py-3 text-sm font-semibold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-emberDark"
+        >
+          Solicitar demonstração
+        </a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="speed-lines relative overflow-hidden">
+        <div class="absolute left-[-6rem] top-24 h-56 w-56 rounded-full bg-ember/12 blur-3xl"></div>
+        <div class="absolute right-[-5rem] top-12 h-64 w-64 rounded-full bg-carbon/8 blur-3xl"></div>
+
+        <div class="relative mx-auto grid max-w-7xl gap-16 px-6 py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-28">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-3 rounded-full border border-ember/10 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm">
+              <span class="pulse-red h-2.5 w-2.5 rounded-full bg-ember"></span>
+              ERP com foco em velocidade operacional e controle real
+            </div>
+
+            <img src="./assets/logo-v3.png" alt="MotoERP" class="mt-8 h-16 w-auto md:h-20" />
+
+            <h1 class="mt-8 max-w-4xl text-5xl font-extrabold leading-[1.02] tracking-tight text-carbon md:text-6xl xl:text-7xl">
+              Um ERP feito para acelerar a operação e dar visão de gestão sem ruído.
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+              O MotoERP integra vendas, estoque, compras, clientes, fornecedores e financeiro em um fluxo direto, rápido e profissional. Menos atrito na rotina e mais domínio sobre cada decisão do negócio.
+            </p>
+
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#cta"
+                class="inline-flex items-center justify-center rounded-full bg-ember px-7 py-4 text-base font-semibold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-emberDark"
+              >
+                Ver demonstração
+              </a>
+              <a
+                href="#modulos"
+                class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-semibold text-slate-700 transition hover:-translate-y-0.5"
+              >
+                Explorar módulos
+              </a>
+            </div>
+
+            <div class="mt-12 grid gap-4 sm:grid-cols-3">
+              <div class="reveal delay-1 rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-extrabold text-carbon">+32%</p>
+                <p class="mt-2 text-sm text-slate-600">mais agilidade no PDV e no atendimento do balcão</p>
+              </div>
+              <div class="reveal delay-2 rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-extrabold text-carbon">-46%</p>
+                <p class="mt-2 text-sm text-slate-600">menos retrabalho entre compras, estoque e financeiro</p>
+              </div>
+              <div class="reveal delay-3 rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-extrabold text-carbon">24h</p>
+                <p class="mt-2 text-sm text-slate-600">visão do negócio atualizada em tempo real</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal delay-1">
+            <div class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-soft">
+              <div class="bg-carbon p-6 text-white">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Painel MotoERP</p>
+                    <p class="mt-2 text-2xl font-bold">Operação de alta performance</p>
+                  </div>
+                  <div class="rounded-full bg-ember px-4 py-2 text-sm font-semibold text-white">Online</div>
+                </div>
+
+                <div class="mt-6 grid gap-4 sm:grid-cols-3">
+                  <div class="dash-float rounded-[1.4rem] bg-white/8 p-4">
+                    <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Vendas</p>
+                    <p class="mt-3 text-2xl font-bold">R$ 286 mil</p>
+                    <p class="mt-2 text-sm text-emerald-300">+18,3% no mês</p>
+                  </div>
+                  <div class="dash-float-2 rounded-[1.4rem] bg-white/8 p-4">
+                    <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Compras</p>
+                    <p class="mt-3 text-2xl font-bold">42 pedidos</p>
+                    <p class="mt-2 text-sm text-slate-300">abastecimento monitorado</p>
+                  </div>
+                  <div class="dash-float rounded-[1.4rem] bg-white/8 p-4">
+                    <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Financeiro</p>
+                    <p class="mt-3 text-2xl font-bold">R$ 104 mil</p>
+                    <p class="mt-2 text-sm text-red-300">saldo líquido projetado</p>
+                  </div>
+                </div>
+
+                <div class="mt-6 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+                  <div class="rounded-[1.5rem] bg-white/8 p-5">
+                    <div class="flex items-center justify-between">
+                      <p class="text-sm font-semibold">Ritmo comercial</p>
+                      <span class="text-xs text-slate-400">Últimas semanas</span>
+                    </div>
+                    <div class="mt-5 flex h-48 items-end gap-3">
+                      <div class="w-full rounded-t-2xl bg-white/10" style="height: 34%"></div>
+                      <div class="w-full rounded-t-2xl bg-white/10" style="height: 46%"></div>
+                      <div class="w-full rounded-t-2xl bg-white/10" style="height: 52%"></div>
+                      <div class="w-full rounded-t-2xl bg-red-500" style="height: 88%"></div>
+                      <div class="w-full rounded-t-2xl bg-red-400/80" style="height: 72%"></div>
+                      <div class="w-full rounded-t-2xl bg-white/10" style="height: 64%"></div>
+                    </div>
+                  </div>
+
+                  <div class="rounded-[1.5rem] bg-white/8 p-5">
+                    <p class="text-sm font-semibold">Alertas críticos</p>
+                    <div class="mt-5 space-y-3">
+                      <div class="rounded-2xl border border-white/8 bg-white/8 p-4">
+                        <p class="text-sm font-semibold">Ruptura iminente</p>
+                        <p class="mt-1 text-sm text-slate-300">8 produtos de alto giro precisam de nova compra.</p>
+                      </div>
+                      <div class="rounded-2xl border border-white/8 bg-white/8 p-4">
+                        <p class="text-sm font-semibold">Contas vencidas</p>
+                        <p class="mt-1 text-sm text-slate-300">5 títulos exigem ação imediata do financeiro.</p>
+                      </div>
+                      <div class="rounded-2xl border border-white/8 bg-white/8 p-4">
+                        <p class="text-sm font-semibold">Clientes ativos</p>
+                        <p class="mt-1 text-sm text-slate-300">14 oportunidades de recompra detectadas.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="modulos" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-ember">Módulos integrados</p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-carbon">Um sistema enxuto na interface e forte na operação.</h2>
+          <p class="mt-4 text-lg leading-8 text-slate-600">
+            Cada módulo foi pensado para conversar com o outro. O que acontece em vendas impacta estoque, financeiro, relatórios e relacionamento sem depender de planilhas paralelas.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-ember"></div>
+            <h3 class="mt-5 text-2xl font-bold">PDV rápido e comercial</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Venda, desconto, cliente, pagamento e cupom em um fluxo preparado para balcão e operação intensa.</p>
+          </article>
+          <article class="reveal delay-1 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-carbon"></div>
+            <h3 class="mt-5 text-2xl font-bold">Estoque com rastreabilidade</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Entradas, saídas, ajustes, custo e alertas por item com visão de status e margem.</p>
+          </article>
+          <article class="reveal delay-2 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-ember"></div>
+            <h3 class="mt-5 text-2xl font-bold">Compras ligadas a fornecedores</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Histórico, último preço, prazo, vínculo produto-fornecedor e recebimento com impacto real no estoque.</p>
+          </article>
+          <article class="reveal rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-carbon"></div>
+            <h3 class="mt-5 text-2xl font-bold">Financeiro para decisão</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Contas a pagar, contas a receber, fluxo de caixa, títulos vencidos e visão prevista do resultado.</p>
+          </article>
+          <article class="reveal delay-1 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-ember"></div>
+            <h3 class="mt-5 text-2xl font-bold">Clientes e CRM básico</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Histórico de compras, ticket médio, inadimplência e observações para acompanhar o relacionamento.</p>
+          </article>
+          <article class="reveal delay-2 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="h-2 w-20 rounded-full bg-carbon"></div>
+            <h3 class="mt-5 text-2xl font-bold">Relatórios práticos</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-600">Gráficos, tabelas, filtros e exportações para enxergar a empresa sem poluição visual.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="vantagens" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.94fr_1.06fr]">
+          <div class="reveal rounded-[2rem] bg-carbon p-8 text-white shadow-soft">
+            <img src="./assets/logo-v3.png" alt="MotoERP" class="h-14 w-auto" />
+            <h2 class="mt-6 text-4xl font-extrabold tracking-tight">A nova marca pede uma presença mais forte e mais direta.</h2>
+            <p class="mt-5 text-base leading-8 text-slate-300">
+              Esta V3 usa o vermelho como aceleração visual e o preto como base de autoridade. O resultado é uma landing mais comercial, mais impactante e com leitura mais agressiva de performance.
+            </p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="reveal rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+              <p class="text-sm font-extrabold uppercase tracking-[0.2em] text-ember">Alta energia</p>
+              <h3 class="mt-4 text-xl font-bold">Vermelho para ação</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Os CTAs e marcadores críticos chamam mais atenção e reforçam senso de velocidade comercial.</p>
+            </div>
+            <div class="reveal delay-1 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+              <p class="text-sm font-extrabold uppercase tracking-[0.2em] text-carbon">Autoridade</p>
+              <h3 class="mt-4 text-xl font-bold">Preto para credibilidade</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">A base escura deixa o produto com mais presença e combina melhor com um ERP de gestão séria.</p>
+            </div>
+            <div class="reveal delay-2 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+              <p class="text-sm font-extrabold uppercase tracking-[0.2em] text-ember">Movimento</p>
+              <h3 class="mt-4 text-xl font-bold">Linhas e diagonais</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">A composição acompanha a lógica da logo e cria sensação de avanço sem pesar o layout.</p>
+            </div>
+            <div class="reveal delay-3 rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-soft">
+              <p class="text-sm font-extrabold uppercase tracking-[0.2em] text-carbon">Clareza</p>
+              <h3 class="mt-4 text-xl font-bold">Leitura limpa</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Mesmo com mais impacto visual, a estrutura continua simples, escaneável e profissional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="metricas" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="reveal rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+          <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-ember">Métricas executivas</p>
+              <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-carbon">Um sistema para sentir velocidade na operação e confiança nos números.</h2>
+              <p class="mt-4 text-lg leading-8 text-slate-600">
+                O objetivo não é só registrar dados. É transformar rotina em processo, processo em controle e controle em vantagem competitiva.
+              </p>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-[1.5rem] bg-fog p-5">
+                <p class="text-sm font-semibold text-slate-500">Itens monitorados</p>
+                <p class="mt-2 text-3xl font-extrabold text-carbon" data-counter="1624">0</p>
+                <p class="mt-2 text-sm text-slate-600">com status, custo e movimentação rastreados</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-fog p-5">
+                <p class="text-sm font-semibold text-slate-500">Vendas concluídas</p>
+                <p class="mt-2 text-3xl font-extrabold text-carbon" data-counter="2386">0</p>
+                <p class="mt-2 text-sm text-slate-600">com impacto automático no estoque e financeiro</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-fog p-5">
+                <p class="text-sm font-semibold text-slate-500">Pedidos de compra</p>
+                <p class="mt-2 text-3xl font-extrabold text-carbon" data-counter="84">0</p>
+                <p class="mt-2 text-sm text-slate-600">com fornecedores e últimos custos organizados</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-fog p-5">
+                <p class="text-sm font-semibold text-slate-500">Visão de caixa</p>
+                <p class="mt-2 text-3xl font-extrabold text-carbon" data-counter="100">0</p>
+                <p class="mt-2 text-sm text-slate-600">por cento integrada ao fluxo operacional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-ember">FAQ</p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-carbon">Perguntas frequentes sobre o MotoERP</h2>
+        </div>
+
+        <div class="mt-12 grid gap-4">
+          <article class="reveal rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-xl font-bold">O MotoERP serve para oficinas e autopeças?</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Sim. A estrutura foi pensada para empresas que precisam conectar atendimento, estoque, compras, financeiro e relacionamento em uma operação única.</p>
+          </article>
+          <article class="reveal delay-1 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-xl font-bold">O sistema ajuda no controle de custos?</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Sim. O ERP acompanha custo de compra, vínculo com fornecedores, movimentações e margem para apoiar decisões melhores de reposição e venda.</p>
+          </article>
+          <article class="reveal delay-2 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-xl font-bold">Existe visão de gestão para a diretoria?</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Sim. O dashboard executivo reúne vendas, financeiro, contas vencidas, estoque crítico e desempenho comercial em uma leitura rápida.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cta" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="reveal overflow-hidden rounded-[2.2rem] bg-carbon px-8 py-12 text-white shadow-soft lg:px-12">
+          <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div class="max-w-3xl">
+              <img src="./assets/logo-v3.png" alt="MotoERP" class="h-14 w-auto" />
+              <h2 class="mt-6 text-4xl font-extrabold tracking-tight">Uma V3 mais forte, mais direta e mais alinhada à nova identidade.</h2>
+              <p class="mt-5 text-base leading-8 text-slate-300">
+                Esta versão posiciona o ERP com mais energia comercial, melhor aderência à logo atual e uma estética mais marcante para apresentação institucional ou prospecção.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4 sm:flex-row lg:flex-col">
+              <a
+                href="mailto:comercial@motoerp.com.br"
+                class="inline-flex items-center justify-center rounded-full bg-ember px-7 py-4 text-base font-semibold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-emberDark"
+              >
+                Falar com o comercial
+              </a>
+              <a
+                href="#inicio"
+                class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/14"
+              >
+                Voltar ao topo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200/70 bg-white/82">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div class="flex items-center gap-3">
+          <img src="./assets/logo-v3.png" alt="Logo MotoERP" class="h-9 w-auto" />
+          <span>MotoERP Landing Page V3</span>
+        </div>
+        <p>HTML simples + Tailwind CDN + JavaScript leve com animações e counters</p>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+      const counters = document.querySelectorAll("[data-counter]");
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const element = entry.target;
+            const target = Number(element.getAttribute("data-counter"));
+            const duration = 1400;
+            const start = performance.now();
+
+            const animate = (now) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              element.textContent = Math.round(target * eased).toLocaleString("pt-BR");
+
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            requestAnimationFrame(animate);
+            counterObserver.unobserve(element);
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => counterObserver.observe(counter));
+    </script>
+  </body>
+</html>
